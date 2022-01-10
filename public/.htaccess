@@ -1,0 +1,9 @@
+# Use the front controller as index file. It serves as a fallback solution when
+# every other rewrite/redirect fails (e.g. in an aliased environment without
+# mod_rewrite). Additionally, this reduces the matching process for the
+# start page (path "/") because otherwise Apache will apply the rewriting rules
+# to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteRule ^([a-zA-Z]*)/?([a-zA-Z]*)?/?([a-zA-Z0-9]*)?/?$ index.php?c=$1&a=$2 [NC,L]
