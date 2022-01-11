@@ -202,5 +202,5 @@ function cleCryptee($valeur, $sel="bMpPP1@2002U") {
 }
 
 function validUrl($string) {
-    return strpos($string, "http") === 0;
+    return strpos($string, "https://amzn.to/") === 0;
 }
